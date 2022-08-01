@@ -1,6 +1,8 @@
 import { Project } from '../models/Project.js'
 import { Task } from '../models/Task.js';
 import { Op } from 'sequelize';
+
+
 export const createProject = async (req, res, next) => {
     const { name, priority, description } = req.body;
     console.log(req.user)

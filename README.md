@@ -10,7 +10,8 @@
 
 ## Logs
 
-- [ ] Upload an attatchment to individual task (audio, img, comments)
+- [ ] user authentication
+- [ ] Upload an attatchments to individual task (audio, img, comments)
 - [ ] Upload a cover and avatar to project
 - [ ] Update your progress on the task
 - [ ] Invite a collab with you on a project
@@ -18,6 +19,7 @@
 - [ ] Use Transactions with PostgreSQL using sequelize
 - [ ] Use Swagger For Documentation
 - [ ] Project owner can add users to the project to start working on it
+- [ ] Schedule a task for upcoming date
 
 For Future:
 

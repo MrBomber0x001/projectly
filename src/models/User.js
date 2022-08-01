@@ -18,6 +18,9 @@ export const User = sequelize.define("users", {
     },
     password: {
         type: DataTypes.STRING
+    },
+    isVerified: {
+        type: DataTypes.BOOLEAN
     }
 })
 

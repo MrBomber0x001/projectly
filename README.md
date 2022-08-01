@@ -15,4 +15,11 @@
 - [ ] Update your progress on the task
 - [ ] Invite a collab with you on a project
 - [ ] Write unit and integration tests
-- [ ] use Transactions with PostgreSQL using sequelize
+- [ ] Use Transactions with PostgreSQL using sequelize
+- [ ] Use Swagger For Documentation
+- [ ] Project owner can add users to the project to start working on it
+
+For Future:
+
+- Project owner can assign task for each individual user
+- notifiaction should be sent to a user for upon being assigned to a task and to admin upon [user completed a task assigned to]

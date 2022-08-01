@@ -8,6 +8,8 @@ export const deleteUser = (req, res, next) => {
  * @route GET /users/:id/projects
  * @param {userId} id   
  */
+
+
 export const getUserProjects = async (req, res, next) => {
     const { id } = req.params
     try {

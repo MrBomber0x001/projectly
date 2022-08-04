@@ -56,7 +56,10 @@ export const updateTask = async (req, res, next) => {
         return res.status(500).send(error)
     }
 }
-
+/**
+ *  
+ * @returns Task with it's comments 
+ */
 export const getTaskComment = async (req, res, next) => {
     try {
         const comments = await Task.findAll({

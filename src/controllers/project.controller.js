@@ -5,7 +5,6 @@ import { Op } from 'sequelize';
 
 export const createProject = async (req, res, next) => {
     const { name, priority, description } = req.body;
-    console.log(req.user)
     const { id } = req.user
     const newProject = await Project.create({
         name,
@@ -64,19 +63,60 @@ export const updateProject = async (req, res, next) => {
 /**
  * @desc Get all [tasks] under a project
  * @param (id) project Id
- * @route GET /projects/:id/tasks
+ * @route GET /projects/:projectId/tasks
  * @access public 
  */
 export const getProjectTasks = async (req, res, next) => {
     try {
-        const { id } = req.params
+        const { projectId } = req.params
         const tasks = await Task.findAll({
             where: {
-                projectId: id
+                projectId
             }
         })
-        res.json(tasks)
+        res.json({ success: true, tasks })
     } catch (error) {
         res.json({ msg: error.message });
     }
+}
+
+export const createList = async (req, res, next) => {
+    const validateTitle = new Value(req.body.title);
+    validateTitle.require('title');
+    validateTitle.maxLength(60);
+
+    let todos = req.body.todos;
+    /**
+     * todos: [
+     * 	{description: "Do your homework", done: false},
+     * 	{description: "Play football", done: false}
+     * ]
+     * 
+     */
+    // validaiton
+
+    const newProject = await Project.create({
+        title: req.body.title,
+        user: req.user.id
+    })
+    tasks.forEach(async (task) => {
+        const validateTask = new Validation(task);
+        validateTask.require('description', 'done');
+
+        validateTask.validator.description.maxLength(5000);
+        validateTask.validator.done.isBoolean();
+
+        await Task.create({
+            description,
+            done,
+            projectId: newProject.id
+        })
+    });
+
+
+
+    res.status(201).json({
+        success: true,
+        message: `projet created successfully`
+    })
 }

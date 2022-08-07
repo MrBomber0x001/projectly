@@ -1,7 +1,10 @@
 # Introduction
 
-Projectly is a productivity software for developers to manage their project management timelines, tasks, and deadlines.
+:star: Projectly is a productivity software for developers to manage their project management timelines, tasks, and deadlines.
 It's meant for all kind of users not just developers, you can use Projectly on your daily to daily use.
+
+:one: Projectly let you make workspaces for your projects, those workspaces will help you organize your projects in a meaningful way. <br>
+:two: inside each project you can invite a collaborator to help you, or assign specific task to a user, and track their progress.
 
 ## Project structure
 
